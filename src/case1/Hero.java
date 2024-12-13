@@ -5,6 +5,9 @@ public class Hero {
     private int totalExp = 0;
     private int hp = 100;
 
+    public Hero() {
+    }
+
     public Hero(int level, int totalExp, int hp) {
         this.level = level; // TODO
         setTotalExp(totalExp);
