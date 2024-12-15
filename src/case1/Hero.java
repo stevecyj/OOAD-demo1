@@ -2,10 +2,17 @@ package case1;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Collections.*;
+
 public class Hero {
     private int level = 1;
     private int totalExp = 0;
     private int hp = 100;
+    private List<Guild> guilds=new ArrayList<>();
 
     @Nullable
     private Pet pet;
@@ -84,5 +91,17 @@ public class Hero {
 
     public int getHp() {
         return hp;
+    }
+
+    public void addGuild(Guild guild) {
+        guilds.add(guild);
+    }
+
+    public void removeGuild(Guild guild) {
+        guilds.remove(guild);
+    }
+
+    public List<Guild> getGuilds() {
+        return unmodifiableList(guilds);
     }
 }
